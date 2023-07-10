@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.6",
 		"@commitlint/config-conventional": "^17.6.6",
+		"@iconify/svelte": "^3.1.4",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
@@ -27,10 +28,12 @@
 		"@vitest/coverage-istanbul": "^0.33.0",
 		"@vitest/ui": "^0.33.0",
 		"autoprefixer": "^10.4.14",
+		"daisyui": "^3.2.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"husky": "^8.0.0",
+		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
@@ -43,5 +46,9 @@
 		"vite": "^4.3.6",
 		"vitest": "^0.32.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"zod": "^3.21.4",
+		"zod-form-data": "^2.0.1"
+	}
 }

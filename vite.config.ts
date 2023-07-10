@@ -5,10 +5,10 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}'],
-    reporters: ['default', 'html'],
-    coverage: {
-      provider: 'istanbul',
-      reporter: ['text', 'json', 'html'],
-    },
+		reporters: ['default', 'html'],
+		coverage: {
+			provider: 'istanbul',
+			reporter: ['text', 'json', 'html']
+		}
 	}
 })
