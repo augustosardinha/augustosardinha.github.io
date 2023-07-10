@@ -3,7 +3,7 @@
 	import { page } from '$app/stores'
 	import Icon from '@iconify/svelte'
 
-	const goToHomePage =() => {
+	const goToHomePage = () => {
 		if ($page.url.pathname === '/') return
 
 		return goto('/')

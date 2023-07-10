@@ -24,7 +24,13 @@
 		<nav class="md:place-self-center md:justify-self-end">
 			<ul data-sveltekit-reload role="list" class="grid grid-flow-col gap-4">
 				<li>
-					<a rel="external" href={socials.linkedin.url} target="_blank" title="LinkedIn" class="btn">
+					<a
+						rel="external"
+						href={socials.linkedin.url}
+						target="_blank"
+						title="LinkedIn"
+						class="btn"
+					>
 						<Icon icon={socials.linkedin.icon} class="w-6 h-6" />
 					</a>
 				</li>

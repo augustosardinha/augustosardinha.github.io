@@ -8,7 +8,7 @@
 	export let data
 
 	let scrollY: number
-  
+
 	const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 	$: showScrollToTop = scrollY > 300

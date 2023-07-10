@@ -4,17 +4,17 @@
 	import { socials } from '$lib/utils/socials'
 	import Icon from '@iconify/svelte'
 
-  export let form
+	export let form
 
-  let tryingToSendEmail = false
+	let tryingToSendEmail = false
 
-  const sendEmail: SubmitFunction = () => { 
-    tryingToSendEmail = true
-    return async (test) => {
-      tryingToSendEmail = false
-      await test.update()
-    }
-  }
+	const sendEmail: SubmitFunction = () => {
+		tryingToSendEmail = true
+		return async (test) => {
+			tryingToSendEmail = false
+			await test.update()
+		}
+	}
 </script>
 
 <div class="flex flex-col gap-4 w-ful">
@@ -30,19 +30,19 @@
 			</h2>
 
 			<ul class="menu gap-8 h-full">
-        {#each Object.values(socials) as social}
-          <li>
-            <a
-              rel="external"
-              class="card gap-4 p-4 text-base hover:text-[{social.color}]"
-              href={social.url}
-              target="_blank"
-            >
-              <Icon icon={social.icon} class="w-8 h-8" />
-              {social.label}
-            </a>
-          </li>
-        {/each}
+				{#each Object.values(socials) as social}
+					<li>
+						<a
+							rel="external"
+							class="card gap-4 p-4 text-base hover:text-[{social.color}]"
+							href={social.url}
+							target="_blank"
+						>
+							<Icon icon={social.icon} class="w-8 h-8" />
+							{social.label}
+						</a>
+					</li>
+				{/each}
 			</ul>
 		</section>
 
@@ -64,7 +64,7 @@
 						name="name"
 						placeholder="Seu nome"
 						class="input input-bordered w-full"
-            class:input-error={form?.errors?.name?.length}
+						class:input-error={form?.errors?.name?.length}
 					/>
 				</div>
 
@@ -76,7 +76,7 @@
 						name="email"
 						placeholder="Seu melhor e-mail"
 						class="input input-bordered w-full"
-            class:input-error={form?.errors?.email?.length}
+						class:input-error={form?.errors?.email?.length}
 					/>
 				</div>
 
@@ -85,24 +85,24 @@
 					<input
 						type="phone"
 						id="user_phone"
-            name="phone"
+						name="phone"
 						placeholder="(11) 99999-9999"
 						class="input input-bordered w-full"
-            class:input-error={form?.errors?.phone?.length}
+						class:input-error={form?.errors?.phone?.length}
 					/>
 				</div>
 
-        <button type="submit" class="btn btn-primary mt-8" class:btn-success={form?.success}> 
-          {#if tryingToSendEmail}
-            <span class="loading loading-dots"></span>
-            Enviando
-          {:else if form?.success}
-            <Icon icon="mdi:success" />
-            Enviado
-          {:else}
-            Enviar
-          {/if}
-        </button>
+				<button type="submit" class="btn btn-primary mt-8" class:btn-success={form?.success}>
+					{#if tryingToSendEmail}
+						<span class="loading loading-dots" />
+						Enviando
+					{:else if form?.success}
+						<Icon icon="mdi:success" />
+						Enviado
+					{:else}
+						Enviar
+					{/if}
+				</button>
 			</form>
 		</section>
 	</article>
